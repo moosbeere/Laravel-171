@@ -29,11 +29,11 @@
       <li class="nav-item active">
         <a class="nav-link" href="/article">Articles<span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/article/create">Create Article</a>
+      </li>
       <li class="nav-item active">
         <a class="nav-link" href="/contacts">Contacts<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -55,7 +55,7 @@
 </nav>
     </header>
     <main>
-      <div class="container">
+      <div class="container centered mt-3">
         @yield('content')
       </div>
     </main>

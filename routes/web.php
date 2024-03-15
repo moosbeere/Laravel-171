@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +17,12 @@ use App\Http\Controllers\ArticleController;
 |
 */
 
+//Comment
+Route::post('comment', [CommentController::class, 'store']);
 
 //Article
-
 Route::resource('article', ArticleController::class);
+
 //Auth
 Route::get('signin', [AuthController::class, 'signin']);
 Route::post('registr', [AuthController::class, 'registr']);
