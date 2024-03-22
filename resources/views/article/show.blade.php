@@ -36,6 +36,7 @@
     <div class="card-body">
         <h5 class="card-title">{{$comment->title}}</h5>
         <p class="card-text">{{$comment->text}}</p>
+        @can('comment', $comment)
         <div class="btn-toolbar">
             <a href="/article/{{$article->id}}/edit" class="btn btn-primary mr-3">Edit article</a>
             <form action="/article/{{$article->id}}" method="post">
@@ -44,6 +45,7 @@
                 <button type="submit" class="btn btn-warning">Delete article</button>
             </form>
         </div>
+        @endcan
         
     </div>
     </div>

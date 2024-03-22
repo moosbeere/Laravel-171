@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('comments', function(Blueprint $table){
-            $table->string('title')->add();
+        Schema::table('users', function(Blueprint $table){
+            $table->string('role')->default('reader')->add();
         });
     }
 

@@ -21,11 +21,14 @@ use App\Http\Controllers\CommentController;
 Route::post('comment', [CommentController::class, 'store']);
 
 //Article
-Route::resource('article', ArticleController::class);
+Route::resource('article', ArticleController::class)->middleware('auth:sanctum');
 
 //Auth
 Route::get('signin', [AuthController::class, 'signin']);
 Route::post('registr', [AuthController::class, 'registr']);
+Route::get('login', [AuthController::class, 'login'])->name('login');
+Route::post('signup', [AuthController::class, 'signup']);
+Route::get('logout', [AuthController::class, 'logout']);
 
 //MainController
 Route::get('/', [MainController::class, 'index']);
